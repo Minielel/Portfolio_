@@ -1,0 +1,23 @@
+<div
+  class="img-stage"
+  #stage
+  (mousedown)="onMouseDown($event)"
+  (mousemove)="onMouseMove($event)"
+  (mouseup)="onMouseUpOrLeave()"
+  (mouseleave)="onMouseUpOrLeave()"
+>
+  <div class="img-track">
+    <div class="img-set" #setEl *ngFor="let r of repeats">
+      <div
+        class="img-slide"
+        [class.landscape]="img.orientation === 'landscape'"
+        [class.portrait]="img.orientation === 'portrait'"
+        [attr.data-caption]="img.caption"
+        *ngFor="let img of images"
+      >
+        <div class="img-inner" [style.backgroundImage]="'url(' + img.src + ')'"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<p class="img-caption">{{ currentCaption() }}</p>

@@ -1,0 +1,8 @@
+<div>
+  <app-project-card
+    *ngFor="let project of projects(); let i = index"
+    [project]="project"
+    [index]="i"
+    appReveal
+  />
+</div>

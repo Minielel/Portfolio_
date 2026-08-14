@@ -1,0 +1,20 @@
+export type ProjectStatus = 'live' | 'progress' | 'archived';
+export type ImageOrientation = 'landscape' | 'portrait';
+
+export interface ProjectImage {
+  /** Pfad zum Bild, z.B. 'assets/projects/portfolio/hero.jpg' */
+  src: string;
+  orientation: ImageOrientation;
+  caption: string;
+}
+
+export interface Project {
+  id: string;
+  title: string;
+  status: ProjectStatus;
+  description: string;
+  githubUrl?: string;
+  docsUrl?: string;
+  techStack: string[];
+  images: ProjectImage[];
+}

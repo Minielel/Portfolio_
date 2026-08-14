@@ -1,0 +1,63 @@
+:host {
+  display: block;
+}
+.project {
+  padding: 100px 0;
+  border-top: 1px solid var(--border);
+}
+.project:first-of-type {
+  border-top: none;
+}
+.project-head {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.project-index {
+  font-family: var(--font-display);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+.project-head h2 {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.status-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.dot-live {
+  background: var(--moss-bright);
+}
+.dot-progress {
+  background: var(--gold);
+}
+.p-link {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+.p-link:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}

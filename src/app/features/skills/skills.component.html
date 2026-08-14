@@ -1,0 +1,9 @@
+<section class="skills" appReveal>
+  <div class="section-label">Skills &amp; Tech-Stack</div>
+  <div class="skill-group" *ngFor="let group of groups">
+    <h3>{{ group.category }}</h3>
+    <div class="tags">
+      <span class="tag" *ngFor="let skill of group.skills">{{ skill }}</span>
+    </div>
+  </div>
+</section>

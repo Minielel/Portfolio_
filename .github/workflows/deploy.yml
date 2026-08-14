@@ -1,0 +1,58 @@
+name: Deploy Portfolio
+
+# Läuft bei jedem Push auf main automatisch.
+on:
+  push:
+    branches:
+      - main
+  # erlaubt zusätzlich manuelles Starten über den "Actions"-Tab auf GitHub
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Node.js einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Abhängigkeiten installieren
+        run: npm ci
+
+      - name: Angular Production Build
+        run: npx ng build --configuration=production
+
+      - name: AWS Zugangsdaten konfigurieren
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Build nach S3 hochladen
+        run: |
+          aws s3 sync dist/portfolio/browser s3://${{ secrets.S3_BUCKET_NAME }} \
+            --delete \
+            --cache-control "public, max-age=31536000, immutable"
+
+      # index.html separat mit kurzem Cache hochladen, damit neue Deploys
+      # sofort sichtbar sind und nicht tagelang gecacht bleiben
+      - name: index.html mit kurzem Cache erneut hochladen
+        run: |
+          aws s3 cp dist/portfolio/browser/index.html s3://${{ secrets.S3_BUCKET_NAME }}/index.html \
+            --cache-control "public, max-age=0, must-revalidate"
+
+      - name: CloudFront Cache invalidieren
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*"

@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
+
+:root {
+  --radius-pill: 999px;
+  --font-display: 'Space Grotesk', -apple-system, sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --gold: #D9A857;
+  --moss: #3F7A34;
+  --moss-bright: #5B9A4C;
+}
+
+[data-theme='dark'] {
+  --bg: #1A1712;
+  --surface: #24201A;
+  --text-primary: #F2ECDD;
+  --text-secondary: #A69C89;
+  --border: rgba(242, 236, 221, 0.1);
+}
+
+[data-theme='light'] {
+  --bg: #EDE6D6;
+  --surface: #F7F2E7;
+  --text-primary: #2B241A;
+  --text-secondary: #756B58;
+  --border: rgba(43, 36, 26, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  transition: background .4s, color .4s;
+}
+
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 24px 160px;
+}
+
+/* Scroll-Reveal (siehe RevealDirective) */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .9s ease, transform .9s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* wiederverwendet von About/Skills/Contact */
+.section-label {
+  font-family: var(--font-display);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--text-secondary);
+  margin-bottom: 18px;
+}

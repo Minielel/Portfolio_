@@ -1,0 +1,16 @@
+<section class="project reveal">
+  <div class="project-head">
+    <span class="project-index">{{ indexLabel }}</span>
+    <div>
+      <h2>{{ project.title }}</h2>
+      <div class="status-row">
+        <span class="dot" [class.dot-live]="project.status === 'live'" [class.dot-progress]="project.status === 'progress'"></span>
+        {{ statusLabel }}
+        <a *ngIf="project.githubUrl" class="p-link" [href]="project.githubUrl" target="_blank" rel="noopener" title="GitHub">GH</a>
+        <a *ngIf="project.docsUrl" class="p-link" [href]="project.docsUrl" title="Docs">Dc</a>
+      </div>
+    </div>
+  </div>
+
+  <app-project-gallery [images]="project.images" />
+</section>

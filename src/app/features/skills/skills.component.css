@@ -1,0 +1,26 @@
+.skills {
+  padding: 100px 0;
+  border-top: 1px solid var(--border);
+}
+.skill-group {
+  margin-bottom: 24px;
+}
+.skill-group h3 {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 0 0 10px;
+}
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.tag {
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+}

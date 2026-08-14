@@ -1,0 +1,17 @@
+<footer class="footer">
+  <span class="copyright">© {{ year }} Daniel Fast</span>
+
+  <div class="footer-actions">
+    <a
+      *ngFor="let link of socialLinks"
+      class="p-link"
+      [href]="link.url"
+      target="_blank"
+      rel="noopener"
+    >{{ link.label }}</a>
+
+    <button class="p-link top-link" (click)="scrollToTop()" title="Nach oben" aria-label="Nach oben scrollen">
+      ↑
+    </button>
+  </div>
+</footer>

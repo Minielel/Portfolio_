@@ -1,0 +1,51 @@
+.img-stage {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow-x: auto;
+  overflow-y: hidden;
+  cursor: grab;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.img-stage::-webkit-scrollbar {
+  display: none;
+}
+.img-stage.grabbing {
+  cursor: grabbing;
+}
+.img-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+}
+.img-set {
+  display: flex;
+  gap: 20px;
+}
+.img-slide {
+  flex: none;
+  height: clamp(240px, 45vw, 560px);
+  overflow: hidden;
+  position: relative;
+}
+.img-slide.landscape {
+  aspect-ratio: 16 / 9;
+}
+.img-slide.portrait {
+  aspect-ratio: 3 / 4;
+}
+.img-inner {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.img-caption {
+  margin: 14px 4px 0;
+  font-size: 13px;
+  color: var(--text-secondary);
+}

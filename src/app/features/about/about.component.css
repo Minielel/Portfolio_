@@ -1,0 +1,11 @@
+.about {
+  padding: 100px 0;
+  border-top: 1px solid var(--border);
+}
+.about p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 560px;
+  margin: 0;
+}
