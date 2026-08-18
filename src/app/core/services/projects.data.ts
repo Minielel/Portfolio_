@@ -20,7 +20,9 @@ export const PROJECTS: Project[] = [
     title: 'Portfolio-Website',
     status: 'live',
     description:
-      'Meine eigene Portfolio-Seite. Angular Frontend mit MVVM-Struktur, interaktiver Three.js-Ameisenkolonie-Simulation im Hero-Bereich, automatischem AWS-Deployment über GitHub Actions.',
+      'Meine eigene Portfolio-Seite, entwickelt als digitale Visitenkarte und Ort für meine Projekte.',
+    longDescription:
+      'Das Angular-Frontend folgt einer MVVM-Struktur und enthält im Hero-Bereich eine interaktive Three.js-Ameisenkolonie-Simulation. Die Seite wird über GitHub Actions automatisch nach AWS S3 ausgeliefert und über CloudFront bereitgestellt.',
     githubUrl: 'https://github.com/Minielel/portfolio',
     techStack: ['Angular', 'TypeScript', 'Three.js', 'AWS S3', 'CloudFront'],
     images: [
@@ -32,7 +34,8 @@ export const PROJECTS: Project[] = [
   id: 'auter',
   title: 'AUTER – Automatisches Terrarium',
   status: 'progress', // Prototyp/Elektronik noch nicht final (Korrosionsproblem), Software läuft im Alltag
-  description: 'Automatisiertes Terrarium auf ESP32-Basis: sensorgesteuerte Bewässerung mit Erfolgsprüfung, zeitgesteuerte Beleuchtung, Web-Dashboard und Telegram-Anbindung. MQTT-Integration für Smarthome-Einbindung ist als nächster Schritt geplant.',
+  description: 'Automatisiertes Terrarium auf ESP32-Basis mit sensorgesteuerter Bewässerung und Beleuchtung.',
+  longDescription: 'Die Bewässerung prüft ihren Erfolg über Sensorwerte. Zusätzlich gibt es ein Web-Dashboard und eine Telegram-Anbindung für Statusmeldungen. Als nächster Schritt ist eine MQTT-Integration für die Smarthome-Einbindung geplant.',
   githubUrl: 'https://github.com/DEIN-USERNAME/AUTER', // TODO: echten Link eintragen
   docsUrl: '/projects/auter/docs', // optional – nur setzen, wenn du die docs/ separat auf der Seite rendern willst
   techStack: ['ESP32', 'C++', 'Arduino Framework', 'Telegram Bot API'],

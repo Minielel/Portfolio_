@@ -12,7 +12,10 @@ export interface Project {
   id: string;
   title: string;
   status: ProjectStatus;
+  /** Kurzer Text, der immer auf der Karte steht. */
   description: string;
+  /** Optionaler Langtext, der über den "Mehr erfahren"-Button aufgeklappt wird. */
+  longDescription?: string;
   githubUrl?: string;
   docsUrl?: string;
   techStack: string[];
