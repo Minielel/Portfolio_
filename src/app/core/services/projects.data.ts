@@ -24,21 +24,20 @@ export const PROJECTS: Project[] = [
     githubUrl: 'https://github.com/Minielel/portfolio',
     techStack: ['Angular', 'TypeScript', 'Three.js', 'AWS S3', 'CloudFront'],
     images: [
-      {
-        src: 'assets/projects/portfolio-website/hero.svg',
-        orientation: 'landscape',
-        caption: 'Hero-Bereich mit der 3D-Ameisenkolonie-Simulation und dem Theme-Toggle.'
-      },
-      {
-        src: 'assets/projects/portfolio-website/projects.svg',
-        orientation: 'portrait',
-        caption: 'Projekt-Übersicht mit Status-Badges pro Karte.'
-      },
-      {
-        src: 'assets/projects/portfolio-website/dark-mode.svg',
-        orientation: 'landscape',
-        caption: 'Dark-Mode-Ansicht der About-Sektion.'
-      }
+      
     ]
-  }
+  },
+
+  {
+  id: 'auter',
+  title: 'AUTER – Automatisches Terrarium',
+  status: 'progress', // Prototyp/Elektronik noch nicht final (Korrosionsproblem), Software läuft im Alltag
+  description: 'Automatisiertes Terrarium auf ESP32-Basis: sensorgesteuerte Bewässerung mit Erfolgsprüfung, zeitgesteuerte Beleuchtung, Web-Dashboard und Telegram-Anbindung. MQTT-Integration für Smarthome-Einbindung ist als nächster Schritt geplant.',
+  githubUrl: 'https://github.com/DEIN-USERNAME/AUTER', // TODO: echten Link eintragen
+  docsUrl: '/projects/auter/docs', // optional – nur setzen, wenn du die docs/ separat auf der Seite rendern willst
+  techStack: ['ESP32', 'C++', 'Arduino Framework', 'Telegram Bot API'],
+  images: [
+    
+  ]
+}
 ];
