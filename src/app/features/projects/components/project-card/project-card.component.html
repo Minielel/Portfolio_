@@ -12,5 +12,16 @@
     </div>
   </div>
 
-  <app-project-gallery [images]="project.images" />
+  <p class="project-description">{{ project.description }}</p>
+
+  <ul class="tech-stack" *ngIf="project.techStack?.length">
+    <li *ngFor="let tech of project.techStack">{{ tech }}</li>
+  </ul>
+
+  <app-project-gallery *ngIf="project.images?.length; else noImage" [images]="project.images" />
+  <ng-template #noImage>
+    <div class="no-image">
+      <span>Noch kein Bild</span>
+    </div>
+  </ng-template>
 </section>

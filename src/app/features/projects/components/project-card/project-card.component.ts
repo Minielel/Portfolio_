@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
-import { NgIf } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { Project } from '../../../../core/models/project.model';
 import { ProjectGalleryComponent } from '../project-gallery/project-gallery.component';
 
 @Component({
   selector: 'app-project-card',
   standalone: true,
-  imports: [ProjectGalleryComponent, NgIf],
+  imports: [ProjectGalleryComponent, NgIf, NgFor],
   templateUrl: './project-card.component.html',
   styleUrl: './project-card.component.css'
 })

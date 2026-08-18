@@ -61,3 +61,42 @@
   border-color: var(--gold);
   color: var(--gold);
 }
+.project-description {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text-primary);
+  max-width: 640px;
+  margin: 0 0 22px;
+}
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0 0 36px;
+  padding: 0;
+}
+.tech-stack li {
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 5px 12px;
+}
+.no-image {
+  width: 100%;
+  height: clamp(180px, 30vw, 320px);
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-family: var(--font-display);
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  background: var(--surface);
+}
