@@ -1,5 +1,5 @@
 (()=>{
-  //const DEBUG=true; // vor dem echten Deploy auf false setzen oder diesen Block entfernen
+  
 
   const u="/assets/r4m8x2.svg";
   let e=null;
