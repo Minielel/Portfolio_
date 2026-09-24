@@ -29,18 +29,6 @@ export const PROJECTS: Project[] = [
   },
 
   {
-    id: 'sensor-modul-gehaeuse',
-    title: 'Gehäuse-Konstruktion für Sensor-Modul',
-    status: 'progress',
-    description:
-      'Konstruktion eines kompakten Gehäuses für ein Sensormodul mit Fokus auf Funktion, Platzierung und Fertigbarkeit.',
-    longDescription:
-      'Das Bauteil wurde mit den Anforderungen eines realen Einsatzszenarios entwickelt: leicht zugängliche Anschlüsse, einfache Montage und robuste Abmessungen für den 3D-Druck. Dabei wurden Passungen, Materialwahl und Fertigungslogik berücksichtigt, damit das Design praktisch umsetzbar und wiederverwendbar bleibt.',
-    techStack: ['Fusion 360', '3D-Druck (PLA/PETG)', 'Toleranzanalysen', 'CAD-Design'],
-    images: []
-  },
-
-  {
     id: 'server-backend-infrastruktur',
     title: 'Server, Networking & Backend',
     status: 'progress',
@@ -53,27 +41,89 @@ export const PROJECTS: Project[] = [
   },
 
   {
-    id: 'vectoai-praxisprojekt',
-    title: 'VectoAI – Backend-Architektur & Praxisprojekt',
-    status: 'progress',
-    description:
-      'Aktuelles Praxisprojekt mit Fokus auf Backend-Architektur, Server-Hosting, Datenverarbeitung und Schnittstellenentwicklung.',
-    longDescription:
-      'Bei VectoAI übernehme ich Verantwortung für die technische Basis, die Server- und Hosting-Struktur sowie die Verbindung zwischen Datenquellen und Anwendungslogik. Der Schwerpunkt liegt auf verständlichen APIs, sauberer Infrastruktur und einer Architektur, die für spätere Erweiterungen und reale Nutzung tragfähig bleibt.',
-    techStack: ['Backend-Architektur', 'Server-Hosting', 'Datenverarbeitung', 'APIs', 'Teamarbeit'],
-    images: []
-  },
+  id: 'vecto-ai',
+  title: 'VectoAI — Agentischer KI-Kundenservice',
+  status: 'progress',
+  description:
+    'Gründungsprojekt & B2B-SaaS-Plattform. Ein KI-Agent, der Kundensupport-Anfragen nicht nur beantwortet, sondern Funktionen in Web-Software eigenständig ausführt – DSGVO-konform gehostet in Frankfurt.',
+  longDescription:
+    'Als CEO und Backend-Entwickler baue ich gemeinsam mit meinem Team VectoAI auf. Neben der technischen Architektur (Backend, Vektordatenbanken, LLM-Integrationen) liegt der Fokus auf den Prozessen einer bevorstehenden UG-Gründung, Marktpositionierung und Unternehmensführung. VectoAI lernt Softwareprodukte über automatisches Website-Scraping und führt Aktionen wie Formularausfüllungen, Navigation und Daten-Imports direkt im Auftrag der Endnutzer aus.',
+  githubUrl: '',
+  // Kannst du ergänzen, falls das Repo öffentlich oder privat verlinkt werden soll
+  techStack: [
+    'Backend Architecture',
+    'Node.js / TypeScript',
+    'Vector DB',
+    'LLM / AI Agents',
+    'SaaS / B2B',
+    'DSGVO / Security'
+  ],
+  images: []
+  // Keine Bilder vorhanden – die Projektkarte rendert somit reinen Text ohne Platzhalter
+},
 
   {
-    id: 'auter',
-    title: 'AUTER – Automatisches Terrarium',
-    status: 'progress',
-    description: 'Automatisiertes Terrarium auf ESP32-Basis mit sensorgesteuerter Bewässerung und Beleuchtung.',
-    longDescription: 'Die Bewässerung prüft ihren Erfolg über Sensorwerte. Zusätzlich gibt es ein Web-Dashboard und eine Telegram-Anbindung für Statusmeldungen. Als nächster Schritt ist eine MQTT-Integration für die Smarthome-Einbindung geplant.',
-    githubUrl: 'https://github.com/DEIN-USERNAME/AUTER',
-    techStack: ['ESP32', 'C++', 'Arduino Framework', 'Telegram Bot API'],
-    images: []
-  },
+  id: 'auter',
+  title: 'AUTER – Automatisches Terrarium',
+  status: 'progress',
+  description:
+    'Smartes IoT-Terrarium mit C++ Steuerung, automatischem Drip-Bewässerungssystem und Web-Dashboard. Aktuell in Überarbeitung (v2) mit isolierter Technik-Kammer gegen Korrosion und optimierter Belüftung.',
+  githubUrl: 'https://github.com/Minielel/AUTER',
+  techStack: [
+    'C++',
+    'IoT / Embedded',
+    '3D Printing / CAD',
+    'Web Dashboard',
+    'Hardware'
+  ],
+  images: [
+    {
+      src: 'assets/projects/auter/AUTER.png',
+      orientation: 'landscape',
+      caption: 'AUTER – Gesamtaufbau des automatisierten Terrariums'
+    },
+    {
+      src: 'assets/projects/auter/WebDashboard.png',
+      orientation: 'portrait',
+      caption: 'Web-Dashboard – Sensor-Überwachung & Steuerung'
+    },
+    {
+      src: 'assets/projects/auter/AUTER_Vase_1.jpeg',
+      orientation: 'portrait',
+      caption: 'Pflanzen-Vase & Bepflanzung (Detailansicht 1)'
+    },
+    {
+      src: 'assets/projects/auter/AUTER_Vase_2.jpeg',
+      orientation: 'portrait',
+      caption: 'Pflanzen-Vase & Bepflanzung (Detailansicht 2)'
+    },
+    {
+      src: 'assets/projects/auter/AUTER_Deckel.png',
+      orientation: 'landscape',
+      caption: 'CAD-Modell: Terrarium-Deckel mit Belüftungsauslässen'
+    },
+    {
+      src: 'assets/projects/auter/AUTER_Drip_Layer.png',
+      orientation: 'landscape',
+      caption: 'CAD-Modell: Drip-Layer (Bewässerungs-Ebene)'
+    },
+    {
+      src: 'assets/projects/auter/AUTER_Nossel.png',
+      orientation: 'landscape',
+      caption: 'CAD-Modell: Sprühdüsen-Halterung (Nozzle)'
+    },
+    {
+      src: 'assets/projects/auter/AUTER_Tech_Layer_1.png',
+      orientation: 'landscape',
+      caption: 'CAD-Modell: Technik-Ebene 1 (Elektronik-Halterung)'
+    },
+    {
+      src: 'assets/projects/auter/AUTER_Tech_Layer_2.png',
+      orientation: 'landscape',
+      caption: 'CAD-Modell: Technik-Ebene 2 (Kabel- & Modulführung)'
+    }
+  ]
+},
 
   {
   id: 'laufrad',
