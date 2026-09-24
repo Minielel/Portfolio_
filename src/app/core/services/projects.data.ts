@@ -73,5 +73,58 @@ export const PROJECTS: Project[] = [
     githubUrl: 'https://github.com/DEIN-USERNAME/AUTER',
     techStack: ['ESP32', 'C++', 'Arduino Framework', 'Telegram Bot API'],
     images: []
-  }
+  },
+
+  {
+  id: 'laufrad',
+  title: 'Motorisiertes DIY-Laufrad',
+  status: 'live',
+  description:
+    'Custom-Hardware-Projekt für das Macherfestival 2026. Ein Kinder-Laufrad kombiniert mit dem Motor, Akku und Display eines Xiaomi Scooter 4 Pro Gen 2, verlängert durch eine Stahlrahmen-Konstruktion und eigene 3D-Druck-Teile.',
+  githubUrl: 'https://github.com/Minielel/Laufrad',
+
+  techStack: [
+    '3D Printing / CAD',
+    'Mechanik',
+    'Xiaomi Hardware'
+  ],
+
+  images: [
+    {
+      src: 'assets/projects/laufrad/Laufrad_Seite.jpeg',
+      orientation: 'landscape',
+      caption: 'Motorisiertes Laufrad – Gesamtansicht'
+    },
+    {
+      src: 'assets/projects/laufrad/Laufrad_Forne.jpeg',
+      orientation: 'landscape',
+      caption: 'Frontansicht mit 3D-gedruckter Display-Halterung'
+    },
+    {
+      src: 'assets/projects/laufrad/Laufrad_Hinten.jpeg',
+      orientation: 'portrait',
+      caption: 'Heckansicht mit Scooter-Motor'
+    },
+    {
+      src: 'assets/projects/laufrad/Display_Halterung_1.png',
+      orientation: 'landscape',
+      caption: 'CAD-Modell: Display-Halterung (Ansicht 1)'
+    },
+    {
+      src: 'assets/projects/laufrad/Display_Halterung_2.png',
+      orientation: 'landscape',
+      caption: 'CAD-Modell: Display-Halterung (Ansicht 2)'
+    },
+    {
+      src: 'assets/projects/laufrad/Akku_Shell_1.png',
+      orientation: 'landscape',
+      caption: 'CAD-Modell: Akku-Schale (Teil 1)'
+    },
+    {
+      src: 'assets/projects/laufrad/Akku_Shell_2.png',
+      orientation: 'landscape',
+      caption: 'CAD-Modell: Akku-Schale (Teil 2)'
+    }
+  ]
+}
 ];

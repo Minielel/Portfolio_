@@ -4,10 +4,28 @@
     <div>
       <h2>{{ project.title }}</h2>
       <div class="status-row">
-        <span class="dot" [class.dot-live]="project.status === 'live'" [class.dot-progress]="project.status === 'progress'"></span>
+        <span
+          class="dot"
+          [class.dot-live]="project.status === 'live'"
+          [class.dot-progress]="project.status === 'progress'"
+        ></span>
         {{ statusLabel }}
-        <a *ngIf="project.githubUrl" class="p-link" [href]="project.githubUrl" target="_blank" rel="noopener" title="GitHub">GH</a>
-        <a *ngIf="project.docsUrl" class="p-link" [href]="project.docsUrl" title="Docs">Dc</a>
+
+        <a
+          *ngIf="project.githubUrl"
+          class="p-link"
+          [href]="project.githubUrl"
+          target="_blank"
+          rel="noopener"
+          title="GitHub"
+        >GH</a>
+
+        <a
+          *ngIf="project.docsUrl"
+          class="p-link"
+          [href]="project.docsUrl"
+          title="Docs"
+        >Dc</a>
       </div>
     </div>
   </div>
@@ -22,9 +40,17 @@
       [attr.aria-expanded]="detailsOpen"
     >
       {{ detailsOpen ? 'Weniger anzeigen' : 'Mehr erfahren' }}
-      <span class="details-arrow" [class.is-open]="detailsOpen" aria-hidden="true">⌄</span>
+      <span
+        class="details-arrow"
+        [class.is-open]="detailsOpen"
+        aria-hidden="true"
+      >⌄</span>
     </button>
-    <p class="project-description project-description--long" *ngIf="detailsOpen">
+
+    <p
+      class="project-description project-description--long"
+      *ngIf="detailsOpen"
+    >
       {{ project.longDescription }}
     </p>
   </div>
@@ -33,11 +59,8 @@
     <li *ngFor="let tech of project.techStack">{{ tech }}</li>
   </ul>
 
-  <app-project-gallery *ngIf="project.images?.length; else noImage" [images]="project.images" />
-  <ng-template #noImage>
-    <div class="no-image">
-      <span class="no-image-icon" aria-hidden="true">▧</span>
-      <span>Bildplatzhalter</span>
-    </div>
-  </ng-template>
+  <app-project-gallery
+    *ngIf="project.images?.length"
+    [images]="project.images"
+  />
 </section>
