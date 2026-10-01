@@ -15,7 +15,30 @@
         [attr.data-caption]="img.caption"
         *ngFor="let img of images"
       >
-        <div class="img-inner" [style.backgroundImage]="'url(' + img.src + ')'"></div>
+        <div class="img-inner">
+  <!-- Wenn es eine MP4-Datei ist: als Video im Loop abspielen -->
+  <video
+    *ngIf="img.src.endsWith('.mp4')"
+    [src]="img.src"
+    autoplay
+    loop
+    muted
+    playsinline
+    style="width: 100%; height: 100%; object-fit: cover;"
+  ></video>
+
+  <!-- Für normale Bilder/GIFs: weiterhin als Hintergrundbild -->
+  <div
+    *ngIf="!img.src.endsWith('.mp4')"
+    style="
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+    "
+    [style.backgroundImage]="'url(' + img.src + ')'"
+  ></div>
+</div>
       </div>
     </div>
   </div>

@@ -1,0 +1,11 @@
+.angular/
+dist/
+tmp/
+node\_modules/
+/coverage
+.idea/
+.vscode/\*
+!.vscode/settings.json
+.DS\_Store
+Thumbs.db
+.env

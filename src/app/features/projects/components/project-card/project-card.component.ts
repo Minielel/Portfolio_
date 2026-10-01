@@ -13,7 +13,6 @@ import { ProjectGalleryComponent } from '../project-gallery/project-gallery.comp
 export class ProjectCardComponent {
   @Input({ required: true }) project!: Project;
   @Input({ required: true }) index = 0;
-  detailsOpen = false;
 
   get statusLabel(): string {
     return { live: 'Live', progress: 'In Arbeit', archived: 'Archiviert' }[this.project.status];
@@ -23,7 +22,4 @@ export class ProjectCardComponent {
     return String(this.index + 1).padStart(2, '0');
   }
 
-  toggleDetails(): void {
-    this.detailsOpen = !this.detailsOpen;
-  }
 }
