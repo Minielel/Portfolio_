@@ -32,29 +32,6 @@
 
   <p class="project-description">{{ project.description }}</p>
 
-  <div class="project-details" *ngIf="project.longDescription">
-    <button
-      class="details-toggle"
-      type="button"
-      (click)="toggleDetails()"
-      [attr.aria-expanded]="detailsOpen"
-    >
-      {{ detailsOpen ? 'Weniger anzeigen' : 'Mehr erfahren' }}
-      <span
-        class="details-arrow"
-        [class.is-open]="detailsOpen"
-        aria-hidden="true"
-      >⌄</span>
-    </button>
-
-    <p
-      class="project-description project-description--long"
-      *ngIf="detailsOpen"
-    >
-      {{ project.longDescription }}
-    </p>
-  </div>
-
   <ul class="tech-stack" *ngIf="project.techStack?.length">
     <li *ngFor="let tech of project.techStack">{{ tech }}</li>
   </ul>

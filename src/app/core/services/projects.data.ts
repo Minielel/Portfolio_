@@ -29,16 +29,40 @@ export const PROJECTS: Project[] = [
   },
 
   {
-    id: 'server-backend-infrastruktur',
-    title: 'Server, Networking & Backend',
-    status: 'progress',
-    description:
-      'Selbstständige Arbeit mit Server-Hardware, Linux-Umgebungen und Backend-Architekturen für digitale Anwendungen.',
-    longDescription:
-      'In diesem Bereich liegt mein Fokus auf der Strukturierung von Server-Setups, Netzwerk-Konfiguration, Docker-Umgebungen und API-Services. Ich interessiere mich dafür, wie einzelne Komponenten – Hostsysteme, Datenbanken, Reverse-Proxies und Anwendungsdienste – zusammenarbeiten und wie sich daraus robuste, skalierbare Systeme entwickeln lassen.',
-    techStack: ['Linux', 'Docker', 'Nginx', 'Python', 'REST-API', 'GitHub', 'SSH'],
-    images: []
-  },
+  id: 'linearschlitten',
+  title: 'Linearschlitten – Meerwasser-Lab PoC',
+  status: 'progress',
+  description: 'Proof of Concept für ein automatisiertes Meerwasser-Labor. Ein aus Anycubic-3D-Druckerteilen gebauter Schlitten mit Taster-Umkehrlogik zur Positionierung von Dosierköpfen.',
+  githubUrl: 'https://github.com/Minielel/Linearschlitten',
+  techStack: [
+    'C++',
+    '3D Printing / CAD',
+    'Hardware Hacking',
+    'Automation'
+  ],
+  images: [
+    {
+      src: 'assets/projects/linearschlitten/Linearschlitten_Video.mp4',
+      orientation: 'portrait',
+      caption: 'Funktions-Demo: Linearschlitten mit Taster-Umkehr im Betrieb'
+    },
+    {
+      src: 'assets/projects/linearschlitten/Linearschlitten_Teil.png',
+      orientation: 'landscape',
+      caption: 'CAD-Modell: Führungs-Schlitten'
+    },
+    {
+      src: 'assets/projects/linearschlitten/Linearschlitten_Teil_Kopf.png',
+      orientation: 'landscape',
+      caption: 'CAD-Modell: Dosierkopf-Halterung'
+    },
+    {
+      src: 'assets/projects/linearschlitten/Linearschlitten_Teil_Motor.png',
+      orientation: 'landscape',
+      caption: 'CAD-Modell: Motor- & Schrittmotor-Halterung'
+    }
+  ]
+},
 
   {
   id: 'vecto-ai',
@@ -60,6 +84,39 @@ export const PROJECTS: Project[] = [
   ],
   images: []
   // Keine Bilder vorhanden – die Projektkarte rendert somit reinen Text ohne Platzhalter
+},
+
+  {
+  id: 'remote-pc',
+  title: 'Self-Hosted Remote Gaming Server',
+  status: 'live',
+  description:
+    'Eigenbau-Server aus PC-Hardware mit GPU-Passthrough (RTX 3060 Ti, i5-12400F). Ermöglicht latenzarmes High-End-Gaming von jedem Ort auf schwachen Client-Geräten über einen sicheren WireGuard-VPN-Tunnel.',
+  githubUrl: 'https://github.com/Minielel/Remote_PC',
+  techStack: [
+    'Homelab / Server',
+    'GPU Passthrough',
+    'Virtualisierung',
+    'WireGuard VPN',
+    'Hardware'
+  ],
+  images: [
+    {
+      src: 'assets/projects/remote-pc/RemotePC_ProxmoxSummary.png',
+      orientation: 'landscape',
+      caption: 'Homelab Server & Virtualisierungs-Setup'
+    },
+    {
+      src: 'assets/projects/remote-pc/RemotePC_ProxmoxHardware.png',
+      orientation: 'landscape',
+      caption: 'Hardware- & Remote-Konfiguration'
+    },
+    {
+      src: 'assets/projects/remote-pc/Moonlight_Stream.png',
+      orientation: 'landscape',
+      caption: 'Client-Zugriff via WireGuard-Tunnel'
+    }
+  ]
 },
 
   {
@@ -174,6 +231,32 @@ export const PROJECTS: Project[] = [
       src: 'assets/projects/laufrad/Akku_Shell_2.png',
       orientation: 'landscape',
       caption: 'CAD-Modell: Akku-Schale (Teil 2)'
+    }
+  ]
+},
+
+{
+  id: 'gonggi-wuerfel',
+  title: '3D-Druck Gonggi-Würfel (In-Print Hardware)',
+  status: 'live',
+  description:
+    'Spielsteine für das koreanische Geschicklichkeitsspiel Gonggi. Im 3D-Druck gefertigt mit per Druckstopp im Inneren versiegelten M5-Muttern für das perfekte Handgewicht.',
+  githubUrl: 'https://github.com/Minielel/Gonggi_Wuerfel',
+  techStack: [
+    '3D Printing / CAD',
+    'In-Print Hardware',
+    'Produkt-Design'
+  ],
+  images: [
+    {
+      src: 'assets/projects/gonggi-wuerfel/Gonggi_WuerfelSet.jpeg',
+      orientation: 'portrait',
+      caption: 'Fertiges Gonggi-Würfelset'
+    },
+    {
+      src: 'assets/projects/gonggi-wuerfel/Gonggi_Wuerfel.png',
+      orientation: 'landscape',
+      caption: 'CAD-Modell des Würfels mit innerem Hohlraum'
     }
   ]
 }

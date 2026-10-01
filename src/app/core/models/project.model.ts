@@ -14,7 +14,7 @@ export interface Project {
   status: ProjectStatus;
   /** Kurzer Text, der immer auf der Karte steht. */
   description: string;
-  /** Optionaler Langtext, der über den "Mehr erfahren"-Button aufgeklappt wird. */
+  /** Optionaler Langtext für eine spätere ausführlichere Projektansicht. */
   longDescription?: string;
   githubUrl?: string;
   docsUrl?: string;

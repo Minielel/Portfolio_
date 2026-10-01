@@ -9,7 +9,7 @@ import {
   ViewChildren,
   signal
 } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { ProjectImage } from '../../../../core/models/project.model';
 
 const GAP_PX = 20;
@@ -17,7 +17,7 @@ const GAP_PX = 20;
 @Component({
   selector: 'app-project-gallery',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, NgIf],
   templateUrl: './project-gallery.component.html',
   styleUrl: './project-gallery.component.css'
 })
